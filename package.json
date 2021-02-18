@@ -1,0 +1,14 @@
+{
+  "name": "npm-package-create",
+  "version": "1.0.0",
+  "description": "This project is to create a package in npm using the reddit api",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Wyatt Allan",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
