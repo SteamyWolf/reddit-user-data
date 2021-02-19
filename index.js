@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-module.exports = async function getRedditUserAbout(username) {
+async function getRedditUserAbout(username) {
     if (typeof username === 'string') {
         let retrieved;
         await fetch(`https://www.reddit.com/user/${username}/about.json`)
@@ -15,7 +15,7 @@ module.exports = async function getRedditUserAbout(username) {
 
 
 
-module.exports = async function getRedditUserComments(username) {
+async function getRedditUserComments(username) {
     if (typeof username === 'string') {
         let retrieved;
         await fetch(`https://www.reddit.com/user/${username}.json`)
@@ -30,7 +30,7 @@ module.exports = async function getRedditUserComments(username) {
 
 
 
-module.exports = async function getRedditSubredditAbout(subreddit) {
+async function getRedditSubredditAbout(subreddit) {
     if (typeof subreddit === 'string') {
         let retrieved;
         await fetch(`https://www.reddit.com/r/${subreddit}/about.json`)
@@ -43,8 +43,7 @@ module.exports = async function getRedditSubredditAbout(subreddit) {
     }
 }
 
-
-module.exports = async function getRedditUserPosts(username) {
+async function getRedditUserPosts(username) {
     if (typeof username === 'string') {
         let retrieved;
         await fetch(`https://www.reddit.com/user/${username}/submitted.json`)
@@ -59,7 +58,7 @@ module.exports = async function getRedditUserPosts(username) {
 
 
 
-module.exports = async function getRedditUserUpvotes(username) {
+async function getRedditUserUpvotes(username) {
     if (typeof username === 'string') {
         let retrieved;
         await fetch(`https://www.reddit.com/user/${username}/upvoted.json`)
@@ -73,4 +72,12 @@ module.exports = async function getRedditUserUpvotes(username) {
     } else {
         return 'You must type in a username as a string'
     }
+}
+
+module.exports = {
+    getRedditUserAbout: getRedditUserAbout,
+    getRedditUserComments: getRedditUserComments,
+    getRedditSubredditAbout: getRedditSubredditAbout,
+    getRedditUserPosts: getRedditUserPosts,
+    getRedditUserUpvotes: getRedditUserUpvotes
 }
