@@ -1,6 +1,6 @@
 {
   "name": "npm-package-create-reddit-user-data",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This project is to create a package in npm using the reddit api that returns data about the user",
   "main": "index.js",
   "scripts": {
