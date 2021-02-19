@@ -1,4 +1,4 @@
-# Grab Reddit Data without the mess :rocket
+# Grab Reddit Data without the mess :rocket:
 This package includes 5 simple functions you can use to view reddit data about your favorite user or subreddit.
 
 ## The Methods
